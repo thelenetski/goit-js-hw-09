@@ -5,8 +5,8 @@
   |============================
 */
 @import url('./reset.css');
-@import url('./vite-promo.css');
 @import url('./header.css');
+@import url('simplelightbox/dist/simple-lightbox.min.css');
 
 :root {
   font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
@@ -22,4 +22,49 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+}
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 0;
+}
+
+.gallery li {
+  width: 30%;
+  height: 300px;
+  padding: 15px;
+  list-style-type: none;
+}
+
+.gallery img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: 0.5s;
+}
+
+.gallery img:hover {
+  transform: scale(1.05);
+  cursor: zoom-in;
+}
+
+.sl-wrapper {
+  background: #2e2f42cc;
+}
+
+@media screen and (max-width: 450px) {
+  .gallery li {
+    width: 100%;
+  }
 }
