@@ -25,14 +25,14 @@ function handleInput() {
 function handleSubmit(event) {
   event.preventDefault();
   const form = event.target;
-  const email = form.elements.email.value;
-  const message = form.elements.message.value;
+  const email = form.elements.email.value.trim();
+  const message = form.elements.message.value.trim();
 
   if (email === '' || message === '') {
     return alert('Fill please all fields');
   } else {
-    formData.email = email.trim();
-    formData.message = message.trim();
+    formData.email = email;
+    formData.message = message;
 
     console.log(formData);
   }
